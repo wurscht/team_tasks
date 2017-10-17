@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="/css/style.css" rel="stylesheet">
+    <link type="text/css" href="../public/css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -33,9 +33,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/user">Benutzer</a></li>
-            <li><a href="/user/create">Benutzer erstellen</a></li>
+              <li><a href="/">Home</a></li>
+              <li><a href="/user">Show all Tasks</a></li>
+              <li><a href="/user/create">Add Tasks</a></li>
+              <li><a href="/user/create">Edit Tasks</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -44,3 +45,5 @@
     <div class="container">
 
     <h1><?= $heading ?></h1>
+
+    
