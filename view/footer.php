@@ -1,6 +1,8 @@
         <hr>
         <footer>
-          <p>&copy; ICT Berufsbildungcenter AG 2016</p>
+          <p>&copy; Created by Mirjam Doyon and Jonas Lehmann</p>
+          <p>Impressum</p>
+          <p>Contact</p>
         </footer>
     </div>
 
