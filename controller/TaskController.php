@@ -29,10 +29,10 @@ class TaskController
     public function doCreate()
     {
         if ($_POST['send']) {
-            $title = $_POST['title'];
-            $description = $_POST['description'];
-            $due_date = $_POST['due_date'];
-            $is_done = $_POST['is_done'];
+            $title = htmlspecialchars($_POST['title']);
+            $description = htmlspecialchars($_POST['description']);
+            $due_date = htmlspecialchars($_POST['due_date']);
+            $is_done = htmlspecialchars($_POST['is_done']);
 
             $taskRepository = new TaskRepository();
             $taskRepository->create($title, $description, $due_date, $is_done);

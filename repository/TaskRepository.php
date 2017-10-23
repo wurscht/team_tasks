@@ -28,8 +28,19 @@ class TaskRepository extends Repository
      *
      * @throws Exception falls das Ausführen des Statements fehlschlägt
      */
-    public function create($firstName, $lastName, $email, $password)
+    public function create($title, $description, $due_date, $is_done)
     {
+        $query = "INSERT INTO $this->tableName (title, description, due_date, is_done) VALUES (?, ?, ?, ?)";
+        
+        $statement = ConnectionHandler::getConnection()->prepare($query);
+        $statement->bind_param('ssss', $title, $description, $due_date, $is_done);
+        
+        if (!$statement->execute()) {
+            throw new Exception($statement->error);
+        }
+
+        return $statement->insert_id;
+        
         /*
         $password = sha1($password);
 
