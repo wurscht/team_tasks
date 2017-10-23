@@ -53,9 +53,17 @@ class TaskController
     
     public function edit()
     {
+        $taskRepository = new TaskRepository();
+        
+        $id = $_GET['id'];
+        if(!$id){
+            echo "Task has no id!";
+        }
+        
         $view = new View('task_edit');
         $view->title = 'Edit task';
         $view->heading = 'Edit task';
+        $view->task = $taskRepository->readById($id);
         $view->display();
     }
     

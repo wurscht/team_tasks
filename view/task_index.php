@@ -14,7 +14,7 @@
                         <p class="description"><?= $task->description;?></p>
                         <p class="due_date">Muss erledigt werden bis am: <?= $task->due_date;?></p>
                         <p>
-                            <a title="Löschen" href="/task/delete?id=<?= $task->id ?>">Löschen</a>
+                            <a title="Delete" href="/task/delete?id=<?= $task->id ?>">Delete</a>
                         </p>
                         <p>
                             <a title="Edit" href="/task/edit?id=<?= $task->id ?>">Edit</a>

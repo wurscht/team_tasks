@@ -46,6 +46,13 @@ class TaskRepository extends Repository
     {
         $query = "UPDATE $this->tableName SET title = ?, description = ?, due_date = ? is_done = ? WHERE id = $id";
             
+        $statement = ConnectionHandler::getConnection()->prepare($query);
+        $statement->bind_param('ssss', $title, $description, $due_date, $is_done);
         
+        if (!$statement->execute()) {
+            throw new Exception($statement->error);
+        }
+
+        return $statement->insert_id;    
     }
 }

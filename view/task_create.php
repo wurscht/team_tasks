@@ -1,3 +1,4 @@
+<h1>Add Tasks</h1>
 <form class="form-horizontal" action="/task/doCreate" method="post">
 	<div class="component" data-html="true">
 		<div class="form-group">
