@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1:3307
--- Erstellungszeit: 23. Okt 2017 um 09:11
+-- Erstellungszeit: 23. Okt 2017 um 09:37
 -- Server-Version: 10.1.9-MariaDB
 -- PHP-Version: 5.6.15
 
@@ -30,7 +30,7 @@ CREATE TABLE `task` (
   `id` int(11) NOT NULL,
   `title` varchar(60) NOT NULL,
   `description` varchar(300) NOT NULL,
-  `due-date` date NOT NULL,
+  `due_date` date NOT NULL,
   `is_done` tinyint(1) DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -38,7 +38,7 @@ CREATE TABLE `task` (
 -- Daten für Tabelle `task`
 --
 
-INSERT INTO `task` (`id`, `title`, `description`, `due-date`, `is_done`) VALUES
+INSERT INTO `task` (`id`, `title`, `description`, `due_date`, `is_done`) VALUES
 (1, 'Zimmer aufräumen', 'Staubsaugen, abstauben, Fenster putzen, Schrank aufräumen', '2017-10-27', 0),
 (2, 'Rechnungen zahlen', 'Arztrechnungen, Miete, Steuern', '2017-10-31', 0);
 

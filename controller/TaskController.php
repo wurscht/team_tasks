@@ -1,6 +1,6 @@
 <?php
 
-require_once '../repository/UserRepository.php';
+require_once '../repository/TaskRepository.php';
 
 /**
  * Siehe Dokumentation im DefaultController.
@@ -14,7 +14,7 @@ class TaskController
         $view = new View('task_index');
         $view->title = 'Task';
         $view->heading = 'Task';
-        $view->tasks = $TaskRepository->readAll();
+        $view->tasks = $taskRepository->readAll();
         $view->display();
     }
 
@@ -31,11 +31,11 @@ class TaskController
         if ($_POST['send']) {
             $title = $_POST['title'];
             $description = $_POST['description'];
-            $due-date = $_POST['due-date'];
+            $due_date = $_POST['due_date'];
             $is_done = $_POST['is_done'];
 
             $taskRepository = new TaskRepository();
-            $taskRepository->create($title, $description, $due-date, $is_done);
+            $taskRepository->create($title, $description, $due_date, $is_done);
         }
 
         // Anfrage an die URI /user weiterleiten (HTTP 302)
