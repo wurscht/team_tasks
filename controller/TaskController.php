@@ -50,4 +50,25 @@ class TaskController
         // Anfrage an die URI /user weiterleiten (HTTP 302)
         header('Location: /task');
     }
+    
+    public function edit()
+    {
+        $view = new View('task_edit');
+        $view->title = 'Edit task';
+        $view->heading = 'Edit task';
+        $view->display();
+    }
+    
+    public function doEdit()
+    {
+        if ($_POST['send']) {
+            $title = htmlspecialchars($_POST['title']);
+            $description = htmlspecialchars($_POST['description']);
+            $due_date = htmlspecialchars($_POST['due_date']);
+            $is_done = htmlspecialchars($_POST['is_done']);
+
+            $taskRepository = new TaskRepository();
+            $taskRepository->edit($title, $description, $due_date, $is_done);
+        }
+    }
 }
