@@ -22,7 +22,8 @@
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
+        <img id="logo" src="/images/logo_TT.png">
+        <a href="/"><img id="header_img" src="/images/to-do-list.jpg"></a>
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
@@ -38,9 +39,7 @@
               <li><a href="/task/create">Add Tasks</a></li>
               <li><a href="/task/create">Edit Tasks</a></li>
           </ul>
-
         </div><!--/.nav-collapse -->
-      </div>
     </nav>
 
     <div class="container">
