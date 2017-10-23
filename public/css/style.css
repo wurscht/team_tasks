@@ -1,9 +1,38 @@
 body {
-  padding-top: 50px;
+   padding-top: 50px;
+ }
+/**
+*Navbar
+**/
+.navbar-inverse, .navbar {
+  background-color: #88B4CA;
+  border-color: #88B4CA;
+}
+.navbar-inverse .navbar-nav>li>a {
+  color: #F9FDFD;
 }
 
-footer {
+/**
+*Footer
+**/
+footer .container{
   display: flex;
-  justify-content: space-between;
+}
+
+footer{
   background-color: #88B4CA;
+  color: #F9FDFD;
+  height: 60px;
+  margin-top: 70vh;
+}
+.copyr {
+  width: 87%;
+}
+
+.footer_info p {
+  display: inline-block;
+}
+
+.footer_info p:first-child{
+  margin-right: 20px;
 }
