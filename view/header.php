@@ -22,8 +22,8 @@
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <img id="logo" src="/images/logo_TT.png">
-        <a href="/"><img id="header_img" src="/images/to-do-list.jpg"></a>
+        <a href="/"><img id="logo" src="/images/logo_TT.png"></a>
+        <img id="header_img" src="/images/to-do-list.jpg">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>

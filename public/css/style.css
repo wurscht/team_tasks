@@ -32,6 +32,10 @@ img#logo {
   background-color: #88B4CA;
   border-color: #88B4CA;
 }
+ul.nav.navbar-nav {
+  font-size: 20px;
+}
+
 .navbar-inverse .navbar-nav>li>a {
   color: #F9FDFD;
 }
@@ -40,12 +44,22 @@ ul.nav.navbar-nav {
   float: right;
 }
 
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover,
+.navbar-inverse .navbar-nav>li>.active>a {
+  color: #242324;
+  background-color: #B8D5EA;
+}
 /**
 *Content
 **/
 
 .container {
   margin-top: 25%;
+}
+
+.home_text {
+  margin-top: 10%;
 }
 
 /**
@@ -75,3 +89,18 @@ footer{
   margin-right: 20px;
 }
 
+/**
+*Home Boxes
+**/
+.panel-default>.panel-heading {
+  color: #242324;
+  background-color: #88B4CA;
+  border-color: #242324;
+}
+
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid #242324;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
