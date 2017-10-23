@@ -22,11 +22,7 @@ return array(
     'database' => array(
         'host'     => 'localhost',
         'username' => 'root',
-<<<<<<< Updated upstream
         'password' => '',
-=======
-        'password' =>  '',
->>>>>>> Stashed changes
         'database' => 'team_tasks',
     ),
 
