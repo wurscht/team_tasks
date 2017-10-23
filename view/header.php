@@ -37,13 +37,11 @@
               <li><a href="/">Home</a></li>
               <li><a href="/task">Show all Tasks</a></li>
               <li><a href="/task/create">Add Tasks</a></li>
-              <li><a href="/task/create">Edit Tasks</a></li>
           </ul>
         </div><!--/.nav-collapse -->
     </nav>
 
     <div class="container">
 
-    <h1><?= $heading ?></h1>
 
     
