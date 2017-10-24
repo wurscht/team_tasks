@@ -23,14 +23,14 @@
         <div class="form-group">
 		  <label class="col-md-2 control-label" for="is_done">is done</label>
 		  <div class="col-md-4">
-		  	<input id="is_done" name="is_done" type="checkbox" value="0" class="input-xs">
+		  	<input id="is_done" name="is_done" type="checkbox" class="input-xs" <?php if ($task->is_done == 1) { ?> checked="checked" <?php } ?>>
 		  </div>
 		</div>
         
 		<div class="form-group">
 	      <label class="col-md-2 control-label" for="send">&nbsp;</label>
 		  <div class="col-md-4">
-		    <input id="send" name="send" type="submit" class="btn btn-primary">
+		    <input id="send" name="send" type="submit" class="btn btn-primary" >
 		  </div>
 		</div>
 	</div>

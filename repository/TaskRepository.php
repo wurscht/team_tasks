@@ -49,7 +49,7 @@ class TaskRepository extends Repository
         $statement = ConnectionHandler::getConnection()->prepare($query);
         if($statement === false)
             echo ConnectionHandler::getConnection()->error;
-        $statement->bind_param('sssis', $title, $description, $due_date, $is_done, $id);
+        $statement->bind_param('sssii', $title, $description, $due_date, $is_done, $id);
         
         if (!$statement->execute()) {
             throw new Exception($statement->error);

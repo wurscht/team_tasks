@@ -74,16 +74,16 @@ class TaskController
             $title = htmlspecialchars($_POST['title']);
             $description = htmlspecialchars($_POST['description']);
             $due_date = htmlspecialchars($_POST['due_date']);
-            if ($_POST['is_done'] == 0) {
-                $_POST['is_done'] = 1;
-                $is_done = $_POST['is_done'];
+            if (isset($_POST['is_done'])) {
+                $is_done = 1;
             } else {
-                $_POST['is_done'] = 0;
-                $is_done = $_POST['is_done'];
+                $is_done = 0;
             }
 
             $taskRepository = new TaskRepository();
             $taskRepository->edit($id, $title, $description, $due_date, $is_done);
+            header("Location: /task");
+            exit;
         }
     }
 }
