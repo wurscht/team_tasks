@@ -13,20 +13,27 @@
               <textarea rows="4" cols="50" id="description" name="description" placeholder="Description" class="form-control input-md" required="required"><?php echo $task->description ?></textarea>
 		  </div>
 		</div>
+        
+        <?php
+        /* Hier werden die Variablen für das min Date des Datepicker vorbereitet */    
+        $today = getdate();
+        $year = $today['year'];
+        $month = $today['mon'];
+        $day = $today['mday'];
+        ?>
+        
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="due_date">Due-Date</label>
 		  <div class="col-md-4">
-		  	<input id="due_date" name="due_date" value="<?php echo $task->due_date ?>" type="date" class="form-control input-md">
+		  	<input id="due_date" name="due_date" min="<?php echo date("$year-$month-$day") ; ?>" value="<?php echo $task->due_date ?>" type="date" class="form-control input-md">
 		  </div>
 		</div>
-        
         <div class="form-group">
 		  <label class="col-md-2 control-label" for="is_done">is done</label>
 		  <div class="col-md-4">
 		  	<input id="is_done" name="is_done" type="checkbox" class="input-xs" <?php if ($task->is_done == 1) { ?> checked="checked" <?php } ?>>
 		  </div>
 		</div>
-        
 		<div class="form-group">
 	      <label class="col-md-2 control-label" for="send">&nbsp;</label>
 		  <div class="col-md-4">

@@ -38,7 +38,7 @@ class TaskController
             $taskRepository->create($title, $description, $due_date, $is_done);
         }
 
-        // Anfrage an die URI /user weiterleiten (HTTP 302)
+        // Anfrage an die URI /task weiterleiten (HTTP 302)
         header('Location: /task');
     }
 
@@ -47,7 +47,7 @@ class TaskController
         $taskRepository = new TaskRepository();
         $taskRepository->deleteById($_GET['id']);
 
-        // Anfrage an die URI /user weiterleiten (HTTP 302)
+        // Anfrage an die URI /task weiterleiten (HTTP 302)
         header('Location: /task');
     }
     

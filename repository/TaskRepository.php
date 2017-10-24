@@ -3,7 +3,7 @@
 require_once '../lib/Repository.php';
 
 /**
- * Das UserRepository ist zuständig für alle Zugriffe auf die Tabelle "user".
+ * Das TaskRepository ist zuständig für alle Zugriffe auf die Tabelle "task".
  *
  * Die Ausführliche Dokumentation zu Repositories findest du in der Repository Klasse.
  */
@@ -16,15 +16,12 @@ class TaskRepository extends Repository
     protected $tableName = 'task';
 
     /**
-     * Erstellt einen neuen benutzer mit den gegebenen Werten.
+     * Erstellt einen neuen Task mit den gegebenen Werten.
      *
-     * Das Passwort wird vor dem ausführen des Queries noch mit dem SHA1
-     *  Algorythmus gehashed.
-     *
-     * @param $firstName Wert für die Spalte firstName
-     * @param $lastName Wert für die Spalte lastName
-     * @param $email Wert für die Spalte email
-     * @param $password Wert für die Spalte password
+     * @param $title Wert für die Spalte title
+     * @param $description Wert für die Spalte description
+     * @param $due_date Wert für die Spalte due_date
+     * @param $is_done Wert für die Spalte is_done
      *
      * @throws Exception falls das Ausführen des Statements fehlschlägt
      */
@@ -41,6 +38,18 @@ class TaskRepository extends Repository
 
         return $statement->insert_id;
     }
+    
+    /**
+     * Ändert einen Task mit den gegebenen Werten.
+     *
+     * @param $id Wert für die Spalte id
+     * @param $title Wert für die Spalte title
+     * @param $description Wert für die Spalte description
+     * @param $due_date Wert für die Spalte due_date
+     * @param $is_done Wert für die Spalte is_done
+     *
+     * @throws Exception falls das Ausführen des Statements fehlschlägt
+     */
     
     public function edit($id, $title, $description, $due_date, $is_done)
     {

@@ -15,8 +15,17 @@
 		</div>
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="due_date">Due Date</label>
+          
+        <?php
+        /* Hier werden die Variablen für das min Date des Datepicker vorbereitet */    
+        $today = getdate();
+        $year = $today['year'];
+        $month = $today['mon'];
+        $day = $today['mday'];
+        ?>
+            
 		  <div class="col-md-4">
-		  	<input id="due_date" name="due_date" type="date" class="form-control input-md" required="required">
+		  	<input id="due_date" name="due_date" type="date" min="<?php echo date("$year-$month-$day") ; ?>" class="form-control input-md" required="required">
 		  </div>
 		</div>
 		<div class="form-group">
