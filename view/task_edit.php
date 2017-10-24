@@ -10,7 +10,7 @@
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="description">Description</label>
 		  <div class="col-md-4">
-		  	<input id="description" name="description" value="<?php echo $task->description ?>" type="text" placeholder="Description" class="form-control input-md">
+              <textarea rows="4" cols="50" id="description" name="description" placeholder="Description" class="form-control input-md" required="required"><?php echo $task->description ?></textarea>
 		  </div>
 		</div>
 		<div class="form-group">
