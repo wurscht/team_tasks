@@ -13,6 +13,10 @@
     <!-- Custom styles for this template -->
     <link href="/css/style.css" type="text/css" rel="stylesheet">
 
+      <!-- Google Fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Farsan|Muli" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed" rel="stylesheet">
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>

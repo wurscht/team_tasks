@@ -1,15 +1,20 @@
 body {
+  font-family: 'Muli', sans-serif;
   padding-top: 50px;
   background-color: #F9FDFD;
+  color: #242324;
 
  }
 /**
 *Fonts
  **/
 
-h1{
-  padding-left: 15px;
-  padding-right: 15px;
+h1, h2, h3, h4, h5, h6, p, div, article{
+  color: #242324;
+}
+
+h1, h3{
+  padding: 0 15px 0 15px;
 }
 
 /**
@@ -24,6 +29,10 @@ img#logo {
   position: absolute;
   width: 14%;
 }
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Saira Extra Condensed', sans-serif;
+}
+
 
 /**
 *Navbar
@@ -33,7 +42,7 @@ img#logo {
   border-color: #88B4CA;
 }
 ul.nav.navbar-nav {
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .navbar-inverse .navbar-nav>li>a {
@@ -46,10 +55,24 @@ ul.nav.navbar-nav {
 
 .navbar-inverse .navbar-nav>li>a:focus,
 .navbar-inverse .navbar-nav>li>a:hover,
-.navbar-inverse .navbar-nav>li>.active>a {
+.active{
   color: #242324;
   background-color: #B8D5EA;
 }
+
+ul.nav.navbar-nav li {
+  width: 165px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px){
+  ul.nav.navbar-nav li,
+  ul.nav.navbar-nav{
+    width: 100% !important;
+    float: none;
+  }
+}
+
 /**
 *Content
 **/
@@ -62,6 +85,15 @@ ul.nav.navbar-nav {
   margin-top: 10%;
 }
 
+article.hreview.open.special a {
+  text-decoration: none;
+  color: #242324;
+}
+
+.panel-default,
+.form-horizontal{
+  margin-top: 25px;
+}
 /**
 *Footer
 **/
