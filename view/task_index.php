@@ -3,7 +3,7 @@
     <h2>All tasks</h2>
 	<?php if (empty($tasks)): ?>
 		<div class="dhd">
-			<h2 class="item title">Hoppla! Keine Tasks gefunden.</h2>
+			<h2 class="item title">No Tasks found, you're free!</h2>
 		</div>
 	<?php else: ?>
 		<?php foreach ($tasks as $task): ?>
@@ -12,13 +12,12 @@
                     <div class="panel-heading"><?= $task->title;?></div>
                     <div class="panel-body">
                         <p class="description"><?= $task->description;?></p>
-                        <p class="due_date">Muss erledigt werden bis am: <?= $task->due_date;?></p>
-                        <p>
-                            <a title="Delete" href="/task/delete?id=<?= $task->id ?>">Delete</a>
-                        </p>
-                        <p>
-                            <a title="Edit" href="/task/edit?id=<?= $task->id ?>">Edit</a>
-                        </p>
+                        <p class="due_date">Has to be done until: <?= $task->due_date;?></p>
+
+                            <a class="btn btn-primary btn_edit" title="Delete" href="/task/delete?id=<?= $task->id ?>">Delete</a>
+
+                            <a class="btn btn-primary btn_edit" title="Edit" href="/task/edit?id=<?= $task->id ?>">Edit</a>
+
                     </div>
                 </div>
             <?php endif ?>
@@ -34,13 +33,11 @@
                     <div class="panel-heading"><?= $task->title;?></div>
                     <div class="panel-body">
                         <p class="description"><?= $task->description;?></p>
-                        <p class="due_date">Have to be done until: <?= $task->due_date;?></p>
-                        <p>
-                            <a title="Delete" href="/task/delete?id=<?= $task->id ?>">Delete</a>
-                        </p>
-                        <p>
-                            <a title="Edit" href="/task/edit?id=<?= $task->id ?>">Edit</a>
-                        </p>
+                        <p class="due_date">Has to be done until: <?= $task->due_date;?></p>
+                            <a class="btn btn-primary btn_edit" title="Delete" href="/task/delete?id=<?= $task->id ?>">Delete</a>
+
+                            <a class="btn btn-primary btn_edit" title="Edit" href="/task/edit?id=<?= $task->id ?>">Edit</a>
+
                     </div>
                 </div>
             <?php endif ?>

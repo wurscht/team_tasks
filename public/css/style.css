@@ -94,6 +94,24 @@ article.hreview.open.special a {
 .form-horizontal{
   margin-top: 25px;
 }
+
+/**
+*Buttons
+**/
+
+.btn-primary,
+.btn{
+  color: #242324;
+  background-color: #88B4CA;
+  border-color: transparent;
+}
+
+.btn-primary:hover,
+.btn:hover,
+.btn_edit:hover{
+  background-color: #B8D5EA;
+  border-color: transparent;
+}
 /**
 *Footer
 **/
@@ -136,3 +154,5 @@ footer{
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 }
+
+
