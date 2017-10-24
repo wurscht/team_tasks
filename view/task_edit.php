@@ -4,7 +4,7 @@
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="title">Title</label>
 		  <div class="col-md-4">
-		  	<input id="title" name="title" value="<?php echo $task->title ?>" type="text" placeholder="Title" class="form-control input-md">
+		  	<input id="title" name="title" value="<?php echo $task->title ?>" required="required" type="text" placeholder="Title" class="form-control input-md">
 		  </div>
 		</div>
 		<div class="form-group">
@@ -25,7 +25,7 @@
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="due_date">Due-Date</label>
 		  <div class="col-md-4">
-		  	<input id="due_date" name="due_date" min="<?php echo date("$year-$month-$day") ; ?>" value="<?php echo $task->due_date ?>" type="date" class="form-control input-md">
+		  	<input id="due_date" required="required" name="due_date" min="<?php echo date("$year-$month-$day") ; ?>" value="<?php echo $task->due_date ?>" type="date" class="form-control input-md">
 		  </div>
 		</div>
         <div class="form-group">

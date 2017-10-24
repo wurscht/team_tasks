@@ -33,13 +33,19 @@ class TaskController
             $description = htmlspecialchars($_POST['description']);
             $due_date = htmlspecialchars($_POST['due_date']);
             $is_done = htmlspecialchars($_POST['is_done']);
-
-            $taskRepository = new TaskRepository();
-            $taskRepository->create($title, $description, $due_date, $is_done);
+            if (strlen($title) > 60) {
+                $view = new view('title_error');
+                $view->title = 'Title error';
+                $view->heading = 'Title error';
+                $view->display();
+            } else {
+                $taskRepository = new TaskRepository();
+                $taskRepository->create($title, $description, $due_date, $is_done);
+                
+                // Anfrage an die URI /task weiterleiten (HTTP 302)
+                header('Location: /task');    
+            }
         }
-
-        // Anfrage an die URI /task weiterleiten (HTTP 302)
-        header('Location: /task');
     }
 
     public function delete()
@@ -79,11 +85,27 @@ class TaskController
             } else {
                 $is_done = 0;
             }
-
-            $taskRepository = new TaskRepository();
-            $taskRepository->edit($id, $title, $description, $due_date, $is_done);
-            header("Location: /task");
-            exit;
+            if (strlen($title) > 60) {
+                $view = new view('title_error');
+                $view->title = 'Title error';
+                $view->heading = 'Title error';
+                $view->display();
+            } else {
+                $taskRepository = new TaskRepository();
+                $taskRepository->edit($id, $title, $description, $due_date, $is_done);
+                header("Location: /task");
+                exit;
+            }
+        }
+    }
+    
+    public function titleError()
+    {
+        if (strlen($_POST['title']) > 60) {
+            $view = new view('title_error');
+            $view->title = 'Title error';
+            $view->heading = 'Title error';
+            $view->display();
         }
     }
 }
