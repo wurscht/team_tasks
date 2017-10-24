@@ -44,10 +44,12 @@ class TaskRepository extends Repository
     
     public function edit($id, $title, $description, $due_date, $is_done)
     {
-        $query = "UPDATE $this->tableName SET title = ?, description = ?, due_date = ? is_done = ? WHERE id = $id";
+        $query = "UPDATE $this->tableName SET title = ?, description = ?, due_date = ?, is_done = ? WHERE id = ?";
             
         $statement = ConnectionHandler::getConnection()->prepare($query);
-        $statement->bind_param('ssss', $title, $description, $due_date, $is_done);
+        if($statement === false)
+            echo ConnectionHandler::getConnection()->error;
+        $statement->bind_param('sssis', $title, $description, $due_date, $is_done, $id);
         
         if (!$statement->execute()) {
             throw new Exception($statement->error);

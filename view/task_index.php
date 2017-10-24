@@ -34,7 +34,7 @@
                     <div class="panel-heading"><?= $task->title;?></div>
                     <div class="panel-body">
                         <p class="description"><?= $task->description;?></p>
-                        <p class="due_date">Muss erledigt werden bis am: <?= $task->due_date;?></p>
+                        <p class="due_date">Have to be done until: <?= $task->due_date;?></p>
                         <p>
                             <a title="Delete" href="/task/delete?id=<?= $task->id ?>">Delete</a>
                         </p>

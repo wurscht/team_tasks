@@ -1,5 +1,6 @@
-<form class="form-horizontal" action="/task/doCreate" method="post">
-	<div class="component" data-html="true">
+<form class="form-horizontal" action="/task/doEdit" method="post">
+	<input type="hidden" name="id" value="<?php echo $_GET['id']; ?>">
+    <div class="component" data-html="true">
 		<div class="form-group">
 		  <label class="col-md-2 control-label" for="title">Title</label>
 		  <div class="col-md-4">
@@ -22,7 +23,7 @@
         <div class="form-group">
 		  <label class="col-md-2 control-label" for="is_done">is done</label>
 		  <div class="col-md-4">
-		  	<input id="is_done" name="is_done" type="checkbox" class="input-xs">
+		  	<input id="is_done" name="is_done" type="checkbox" value="0" class="input-xs">
 		  </div>
 		</div>
         

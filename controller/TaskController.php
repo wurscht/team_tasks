@@ -70,13 +70,20 @@ class TaskController
     public function doEdit()
     {
         if ($_POST['send']) {
+            $id = htmlspecialchars($_POST['id']);
             $title = htmlspecialchars($_POST['title']);
             $description = htmlspecialchars($_POST['description']);
             $due_date = htmlspecialchars($_POST['due_date']);
-            $is_done = htmlspecialchars($_POST['is_done']);
+            if ($_POST['is_done'] == 0) {
+                $_POST['is_done'] = 1;
+                $is_done = $_POST['is_done'];
+            } else {
+                $_POST['is_done'] = 0;
+                $is_done = $_POST['is_done'];
+            }
 
             $taskRepository = new TaskRepository();
-            $taskRepository->edit($title, $description, $due_date, $is_done);
+            $taskRepository->edit($id, $title, $description, $due_date, $is_done);
         }
     }
 }
