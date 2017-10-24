@@ -5,8 +5,6 @@
                     <p>©Created by Mirjam Doyon and Jonas Lehmann</p>
                 </div>
                 <div class="footer_info">
-                    <p>Impressum</p>
-                    <p>Contact</p>
                 </div>
         </footer>
     </div>
