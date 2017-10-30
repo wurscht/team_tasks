@@ -117,6 +117,12 @@ article.hreview.open.special a {
   background-color: #B8D5EA;
   border-color: transparent;
 }
+
+i.fa.fa-angle-double-down {
+  float: right;
+  font-size: 20px;
+}
+
 /**
 *Footer
 **/

@@ -7,8 +7,9 @@
 
     <title>Team Tasks</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS and Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+      <script src="https://use.fontawesome.com/a951fb7605.js"></script>
 
     <!-- Custom styles for this template -->
     <link href="/css/style.css" type="text/css" rel="stylesheet">
@@ -38,7 +39,7 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-              <li><a href="/">Home</a></li>
+              <li><a href="/home">Home</a></li>
               <li><a href="/task">Show all Tasks</a></li>
               <li><a href="/task/create">Add Tasks</a></li>
           </ul>
