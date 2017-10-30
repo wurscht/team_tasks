@@ -6,7 +6,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">Overview of the tasks</div>
                 <div class="panel-body">
-                    <p class="description">Here you can find an overview of all task that should be done.</p>
+                    <p class="description">Here you can find an overview of all tasks that should be done.</p>
                 </div>
             </div>
         </a>

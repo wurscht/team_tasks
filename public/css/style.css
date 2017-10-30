@@ -131,6 +131,8 @@ footer{
   line-height: 60px;
   width: 100%;
   position: absolute;
+  bottom: auto;
+  margin-top: 20vh;
 }
 .copyr {
   width: 87%;
@@ -145,10 +147,6 @@ footer{
 
 .footer_info p:first-child{
   margin-right: 20px;
-}
-
-.footer_push {
-  margin-top: 25px;
 }
 
 /**
