@@ -7,8 +7,8 @@
                 <form class="form-horizontal" action="/login/check" method="post">
                     <input id="login" name="password" required="required" type="password" placeholder="Password" class="form-control input-md">
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="send">&nbsp;</label>
-                        <div class="col-md-4">
+                        <label class="col-md-3 control-label" for="send">&nbsp;</label>
+                        <div class="col-md-2 col-xs-offset-2">
                             <input id="send" name="send" type="submit" class="btn btn-primary btn_login" value="send" >
                         </div>
                     </div>

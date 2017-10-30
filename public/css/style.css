@@ -115,7 +115,7 @@ article.hreview.open.special a {
 }
 .btn_login {
     margin-top: 40px;
-    width: 149px;
+    width: 100px !important;
 }
 
 .btn-primary:hover,
