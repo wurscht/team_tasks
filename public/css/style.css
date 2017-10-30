@@ -15,6 +15,7 @@ h1, h2, h3, h4, h5, h6, p, div, article{
 
 h1, h3{
   padding: 0 15px 0 15px;
+  margin: 50px 0 50px 0;
 }
 
 /**
@@ -33,6 +34,9 @@ h1, h2, h3, h4, h5, h6{
   font-family: 'Saira Extra Condensed', sans-serif;
 }
 
+.h_subpage{
+  padding: 0;
+}
 
 /**
 *Navbar
