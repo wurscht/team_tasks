@@ -1,4 +1,3 @@
-
 <div class="container home_text">
     <h1>Welcome to Team Tasks!</h1>
     <h3>Add the tasks you need to take care of, and finish them one at a time.</h3>
