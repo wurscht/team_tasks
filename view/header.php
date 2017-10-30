@@ -27,7 +27,7 @@
   </head>
   <body>
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <a href="/"><img id="logo" src="/images/logo_TT.png" alt="Logo"></a>
+        <a href="/home"><img id="logo" src="/images/logo_TT.png" alt="Logo"></a>
         <img id="header_img" alt="Header" src="/images/to-do-list.jpg">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
