@@ -50,7 +50,6 @@ class TaskRepository extends Repository
      *
      * @throws Exception falls das Ausführen des Statements fehlschlägt
      */
-    
     public function edit($id, $title, $description, $due_date, $is_done)
     {
         $query = "UPDATE $this->tableName SET title = ?, description = ?, due_date = ?, is_done = ? WHERE id = ?";

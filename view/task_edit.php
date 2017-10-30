@@ -15,7 +15,9 @@
 		</div>
         
         <?php
-        /* Hier werden die Variablen für das min Date des Datepicker vorbereitet */    
+        /** 
+         *Hier werden die Variablen für das min Date des Datepicker vorbereitet
+         */    
         $today = getdate();
         $year = $today['year'];
         $month = $today['mon'];
