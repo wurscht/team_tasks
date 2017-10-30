@@ -1,80 +1,83 @@
 body {
-  font-family: 'Muli', sans-serif;
-  padding-top: 50px;
-  background-color: #F9FDFD;
-  color: #242324;
+    font-family: 'Muli', sans-serif;
+    padding-top: 50px;
+    background-color: #F9FDFD;
+    color: #242324;
 
- }
+}
+
 /**
 *Fonts
  **/
 
-h1, h2, h3, h4, h5, h6, p, div, article{
-  color: #242324;
+h1, h2, h3, h4, h5, h6, p, div, article {
+    color: #242324;
 }
 
-h1, h3{
-  padding: 0 15px 0 15px;
-  margin: 50px 0 50px 0;
+h1, h3 {
+    padding: 0 15px 0 15px;
+    margin: 50px 0 50px 0;
 }
 
 /**
 *Logo, Header
 **/
-#header_img{
-  width: 100%;
+#header_img {
+    width: 100%;
 }
 
 img#logo {
-  float: left;
-  position: absolute;
-  width: 10%;
-}
-h1, h2, h3, h4, h5, h6{
-  font-family: 'Saira Extra Condensed', sans-serif;
+    float: left;
+    position: absolute;
+    width: 10%;
 }
 
-.h_subpage{
-  padding: 0;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Saira Extra Condensed', sans-serif;
+}
+
+.h_subpage {
+    padding: 0;
 }
 
 /**
 *Navbar
 **/
 .navbar-inverse, .navbar {
-  background-color: #88B4CA;
-  border-color: #88B4CA;
-}
-ul.nav.navbar-nav {
-  font-size: 15px;
-}
-
-.navbar-inverse .navbar-nav>li>a {
-  color: #F9FDFD;
+    background-color: #88B4CA;
+    border-color: #88B4CA;
 }
 
 ul.nav.navbar-nav {
-  float: right;
+    font-size: 15px;
 }
 
-.navbar-inverse .navbar-nav>li>a:focus,
-.navbar-inverse .navbar-nav>li>a:hover,
-.active{
-  color: #242324;
-  background-color: #B8D5EA;
+.navbar-inverse .navbar-nav > li > a {
+    color: #F9FDFD;
+}
+
+ul.nav.navbar-nav {
+    float: right;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover,
+.active {
+    color: #242324;
+    background-color: #B8D5EA;
 }
 
 ul.nav.navbar-nav li {
-  width: 165px;
-  text-align: center;
+    width: 165px;
+    text-align: center;
 }
 
-@media screen and (max-width: 767px){
-  ul.nav.navbar-nav li,
-  ul.nav.navbar-nav{
-    width: 100% !important;
-    float: none;
-  }
+@media screen and (max-width: 767px) {
+    ul.nav.navbar-nav li,
+    ul.nav.navbar-nav {
+        width: 100% !important;
+        float: none;
+    }
 }
 
 /**
@@ -82,22 +85,22 @@ ul.nav.navbar-nav li {
 **/
 
 .container {
-  margin-top: 15%;
-  min-height: 560px;
+    margin-top: 15%;
+    min-height: 560px;
 }
 
 .home_text {
-  margin-top: 0;
+    margin-top: 0;
 }
 
 article.hreview.open.special a {
-  text-decoration: none;
-  color: #242324;
+    text-decoration: none;
+    color: #242324;
 }
 
 .panel-default,
-.form-horizontal{
-  margin-top: 25px;
+.form-horizontal {
+    margin-top: 25px;
 }
 
 /**
@@ -105,70 +108,71 @@ article.hreview.open.special a {
 **/
 
 .btn-primary,
-.btn{
-  color: #242324;
-  background-color: #88B4CA;
-  border-color: transparent;
+.btn {
+    color: #242324;
+    background-color: #88B4CA;
+    border-color: transparent;
 }
 
 .btn-primary:hover,
 .btn:hover,
-.btn_edit:hover{
-  background-color: #B8D5EA;
-  border-color: transparent;
+.btn_edit:hover {
+    background-color: #B8D5EA;
+    border-color: transparent;
 }
 
 i.fa.fa-angle-double-down {
-  float: right;
-  font-size: 20px;
+    float: right;
+    font-size: 20px;
 }
 
 /**
 *Footer
 **/
-footer .container{
-  display: flex;
+footer .container {
+    display: flex;
 }
 
-footer{
-  background-color: #88B4CA;
-  color: #F9FDFD;
-  min-height: 60px;
-  line-height: 60px;
-  width: 100%;
-  position: absolute;
-  bottom: auto;
-  margin-top: 20vh;
+footer {
+    background-color: #88B4CA;
+    color: #F9FDFD;
+    min-height: 60px;
+    line-height: 60px;
+    width: 100%;
+    position: absolute;
+    bottom: auto;
+    margin-top: 20vh;
 }
+
 .copyr {
-  width: 87%;
-  margin-left: 55px;
+    width: 87%;
+    margin-left: 55px;
 }
 
 .footer_info p,
 .footer_info,
-.copyr{
-  display: inline-block;
+.copyr {
+    display: inline-block;
 }
 
-.footer_info p:first-child{
-  margin-right: 20px;
+.footer_info p:first-child {
+    margin-right: 20px;
 }
 
 /**
 *Home Boxes
 **/
-.panel-default>.panel-heading {
-  color: #242324;
-  background-color: #88B4CA;
-  border-color: #242324;
+.panel-default > .panel-heading {
+    color: #242324;
+    background-color: #88B4CA;
+    border-color: #242324;
 }
 
 .panel-heading {
-  padding: 10px 15px;
-  border-bottom: 1px solid #242324;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+    padding: 10px 15px;
+    border-bottom: 1px solid #242324;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 
