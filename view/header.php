@@ -42,6 +42,11 @@
               <li><a href="/home">Home</a></li>
               <li><a href="/task">Show all Tasks</a></li>
               <li><a href="/task/create">Add Tasks</a></li>
+              <?php if (isset($_SESSION['login']) && $_SESSION['login'] == true) { ?>
+              <li><a href="/login/logout">Logout</a></li>
+              <?php } else { ?>
+              <li><a href="/">Login</a></li>
+              <?php } ?>
           </ul>
         </div><!--/.nav-collapse -->
     </nav>

@@ -13,8 +13,8 @@ require_once '../repository/TaskRepository.php';
 class LoginController
 {
     /**
-     * Funktion, die den User in die Seite einloggt,
-     * wenn das richtige Passwort eingegeben wurde.
+     * Funktion, um die Login Seite anzuzeigen.
+     * Gibt die View "Login" zurück.
      */
     public function index()
     {
@@ -24,6 +24,14 @@ class LoginController
         $view->display();
     }
     
+    /**
+     * Funktion, die den User in die Seite einloggt,
+     * wenn das richtige Passwort eingegeben wurde.
+     * 
+     * Bei richtigem Passwort wird der User auf die View "home" weitergeleitet.
+     * Bei falschem Passwort wird der User auf die View "login" weitergeleitet, der GET Parameter
+     * "login" wird zudem auf "fail" gesetzt. Dadurch wird dem User eine Fehlermeldung angezeigt.
+     */
     public function check()
     {
         if ($_POST['password'] == "salami1") {
@@ -32,5 +40,16 @@ class LoginController
         } else {
             header("Location: /login?login=fail");
         }
+    }
+    
+    
+    /**
+     * Funktion, um den User auszuloggen.
+     * Die Session wird zerstört und der User wird auf die View "login" weitergeleitet.
+     */
+    public function logout()
+    {
+        session_destroy();
+        header("Location: /login");
     }
 }

@@ -1,3 +1,7 @@
+<?php
+if (isset($_SESSION['login']) && $_SESSION['login'] == true) 
+    {
+?>
 <h1>Add Tasks</h1>
 <form class="form-horizontal" action="/task/doCreate" method="post">
 	<div class="component" data-html="true">
@@ -36,3 +40,10 @@
 		</div>
 	</div>
 </form>
+<?php 
+    } else {
+?>
+    <h1 class="h_subpage">You are not logged in!</h1>
+<?php
+    }
+?>

@@ -1,3 +1,7 @@
+<?php
+if (isset($_SESSION['login']) && $_SESSION['login'] == true) 
+    {
+?>
 <h1>Overview</h1>
 <article class="hreview open special col-xs-6">
     <h2>All tasks</h2>
@@ -48,3 +52,10 @@
         <?php $i++; ?>
     <?php endforeach ?>
 </article>
+<?php 
+    } else {
+?>
+    <h1 class="h_subpage">You are not logged in!</h1>
+<?php
+    }
+?>

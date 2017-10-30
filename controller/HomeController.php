@@ -12,6 +12,10 @@ require_once '../repository/TaskRepository.php';
  */
 class HomeController
 {
+    /**
+     * Funktion um die Home Seite anzuzeigen.
+     * Gibt die View "Home" zurück.
+     */
     public function index()
     {
         $taskRepository = new TaskRepository();
