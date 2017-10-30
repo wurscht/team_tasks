@@ -17,3 +17,16 @@
         </div>
     </article>
 </div>
+    <form class="form-horizontal" action="/login/check" method="post">
+        <input id="login" name="login" required="required" type="password" placeholder="Password" class="form-control input-md">
+        <div class="form-group">
+	      <label class="col-md-2 control-label" for="send">&nbsp;</label>
+		  <div class="col-md-4">
+		    <input id="send" name="send" type="submit" class="btn btn-primary" value="send" >
+		  </div>
+		</div>
+        <?php if ($_SESSION['login'] == false) { ?>
+            <p>Your password was incorrect. Please try again.</p>
+        <?php } ?>
+    </form>
+</div>

@@ -187,22 +187,4 @@ class TaskController
             
         }
     }
-    
-    /**
-     * Funktion, die den User in die Seite einloggt,
-     * wenn das richtige Passwort eingegeben wurde.
-     */
-    public function login()
-    {
-        $view = new view('login');
-        $view->title = 'Login';
-        $view->heading = 'Login';
-        $view->display();
-        
-        if ($_POST['password'] == "salami1") {
-            $_SESSION['login'] = true;
-            header("Location: /home");
-            return true;
-        }
-    }
 }

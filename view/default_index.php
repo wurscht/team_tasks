@@ -1,3 +1,7 @@
+<?php
+if (isset($_SESSION['login']) && $_SESSION['login'] == true) 
+    {
+?>
 <div class="container home_text">
     <h1>Welcome to Team Tasks!</h1>
     <h3>Add the tasks you need to take care of, and finish them one at a time.</h3>
@@ -24,3 +28,10 @@
     </article>
 
 </div>
+<?php 
+    } else {
+?>
+    <h1 class="h_subpage">You are not logged in!</h1>
+<?php
+    }
+?>
