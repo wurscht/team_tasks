@@ -39,10 +39,9 @@ class TaskController
             }
             if ($this->titleError() == true)
             {
-                $this->titleError();
-            } else if ($this->descriptionError())
+               
+            } else if ($this->descriptionError()== true)
             {
-                $this->descriptionError();
             } 
             else {
                 $taskRepository = new TaskRepository();
@@ -93,10 +92,8 @@ class TaskController
             }
             if ($this->titleError() == true)
             {
-                $this->titleError();
-            } else if ($this->descriptionError())
+            } else if ($this->descriptionError() == true)
             {
-                $this->descriptionError();
             }
             else {
                 $taskRepository = new TaskRepository();
