@@ -34,7 +34,7 @@ class LoginController
      */
     public function check()
     {
-        if ($_POST['password'] == "wurst17") {
+        if ($_POST['password'] == "salami1") {
             $_SESSION['login'] = true;
             header("Location: /home");
         } else {

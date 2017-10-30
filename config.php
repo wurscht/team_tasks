@@ -20,10 +20,10 @@ return array(
 
     // Datebankkonfiguration
     'database' => array(
-        'host'     => 'localhost',
-        'username' => 'root',
-        'password' => '',
-        'database' => 'team_tasks',
+        'host'     => 'bbc-projects.ch',
+        'username' => 'blehmjsql1',
+        'password' => 'kbouYlcPyi',
+        'database' => 'task',
     ),
 
 );
