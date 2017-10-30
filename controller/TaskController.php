@@ -12,16 +12,7 @@ require_once '../repository/TaskRepository.php';
  */
 class TaskController
 {
-    public function home()
-    {
-        $taskRepository = new TaskRepository();
         
-        $view = new View('default_index');
-        $view->title = 'Home';
-        $view->heading = 'Home';
-        $view->display();
-    }
-    
     /**
      * Funktion um alle Tasks anzuzeigen.
      * Gibt die View "Task" zurück.
@@ -209,8 +200,9 @@ class TaskController
         $view->display();
         
         if ($_POST['password'] == "salami1") {
+            $_SESSION['login'] = true;
             header("Location: /home");
-                exit;
+            return true;
         }
     }
 }

@@ -113,6 +113,10 @@ article.hreview.open.special a {
     background-color: #88B4CA;
     border-color: transparent;
 }
+.btn_login {
+    margin-top: 40px;
+    width: 149px;
+}
 
 .btn-primary:hover,
 .btn:hover,
