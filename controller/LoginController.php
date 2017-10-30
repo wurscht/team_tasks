@@ -26,9 +26,7 @@ class LoginController
     
     public function check()
     {
-        exit('hello');
         if ($_POST['password'] == "salami1") {
-            exit('finish here');
             $_SESSION['login'] = true;
             header("Location: /home");
         } else {
