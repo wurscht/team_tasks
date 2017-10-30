@@ -32,13 +32,19 @@ class TaskController
             $title = htmlspecialchars($_POST['title']);
             $description = htmlspecialchars($_POST['description']);
             $due_date = htmlspecialchars($_POST['due_date']);
-            $is_done = htmlspecialchars($_POST['is_done']);
-            if (strlen($title) > 60) {
-                $view = new view('title_error');
-                $view->title = 'Title error';
-                $view->heading = 'Title error';
-                $view->display();
+            if (isset($_POST['is_done'])) {
+                $is_done = 1;
             } else {
+                $is_done = 0;
+            }
+            if ($this->titleError() == true)
+            {
+                $this->titleError();
+            } else if ($this->descriptionError())
+            {
+                $this->descriptionError();
+            } 
+            else {
                 $taskRepository = new TaskRepository();
                 $taskRepository->create($title, $description, $due_date, $is_done);
                 
@@ -85,12 +91,14 @@ class TaskController
             } else {
                 $is_done = 0;
             }
-            if (strlen($title) > 60) {
-                $view = new view('title_error');
-                $view->title = 'Title error';
-                $view->heading = 'Title error';
-                $view->display();
-            } else {
+            if ($this->titleError() == true)
+            {
+                $this->titleError();
+            } else if ($this->descriptionError())
+            {
+                $this->descriptionError();
+            }
+            else {
                 $taskRepository = new TaskRepository();
                 $taskRepository->edit($id, $title, $description, $due_date, $is_done);
                 header("Location: /task");
@@ -106,6 +114,19 @@ class TaskController
             $view->title = 'Title error';
             $view->heading = 'Title error';
             $view->display();
+            return true;
+        }
+    }
+    
+    public function descriptionError()
+    {
+        if (strlen($_POST['description']) > 300) {
+            $view = new view('description_error');
+            $view->title = 'Description error';
+            $view->heading = 'Description error';
+            $view->display();
+            return true;
+            
         }
     }
 }
